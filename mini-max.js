@@ -7,16 +7,11 @@ space-separated long integers.
 function miniMaxSum(arr) {
     let min=10000000;
     let max=0;
-    let sum=0;
+    let sum = 0;
     let length=arr.length;
     for(let i=0;i<length;i++){
-        sum+=arr[i];
-        if(min>arr[i]){
-            min=arr[i];
-        }
-        if(max<arr[i]){
-            max=arr[i];
-        }
+        sum +=arr[i];
+        
     }
-    console.log((sum-max),(sum-min));
-}
+    arr.sort();
+    console.log((sum - arr[length-1]), (sum - arr[0])) }
